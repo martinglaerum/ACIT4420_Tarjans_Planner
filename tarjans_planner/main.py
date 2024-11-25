@@ -63,7 +63,7 @@ def main():
             seconds = int(remaining_seconds % 60)
 
                 # Print the total time for the path
-            print(f"Least time:, {hours} hours, {minutes} minutes, and {seconds} seconds")
+            print(f"Total time:, {hours} hours, {minutes} minutes, and {seconds} seconds")
             print("Total cost:", result["total_cost"])
 
             # Create and show the graph
