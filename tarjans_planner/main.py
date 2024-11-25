@@ -33,7 +33,7 @@ def main():
 
         # Find the budget for the user
     while (optimazation == "cost"):
-        maximum_cost = input("What is your budget?")
+        maximum_cost = int(input("What is your budget? "))
         if (maximum_cost > 0 and maximum_cost < 100000):
             break  # Exit the loop if a valid choice is made
         else:
