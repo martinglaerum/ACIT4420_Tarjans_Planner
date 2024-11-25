@@ -1,3 +1,8 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(BASE_DIR, "locations.txt") # Path to the locations file
+
 def changeData():
     position = loadData()
     
@@ -45,14 +50,15 @@ def changeData():
     
 def saveData(position):
         # Open the locations file and write to it
-    with open("locations.txt", "w") as file:
+    with open(file_path, "w") as file:
         for row in position:
             file.write(",".join(map(str, row)) + "\n")
 
 def loadData():
+        # Finds the absolute path to the current file's directory
     position = []
         # Open the locations file and read it's content
-    with open("locations.txt", "r") as file:
+    with open(file_path, "r") as file:
         lines = file.readlines()
     
         # Process each line
