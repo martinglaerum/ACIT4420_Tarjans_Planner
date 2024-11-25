@@ -13,4 +13,9 @@ setup(
             'tarjans_planner=tarjans_planner.main:main',  # Points directly to the main function in main.py
         ],
     },
+    install_requires=[
+        "geopy",
+        "matplotlib",
+        "networkx"
+    ],
 )
