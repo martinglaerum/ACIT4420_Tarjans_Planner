@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 
-position = file_management.loadData() # Load the locations
+LOCATIONS = file_management.load_data() # Load the locations
 
 def main(path=[], transport=[]):
         # Define the edges between each location
@@ -15,7 +15,7 @@ def main(path=[], transport=[]):
     G.add_edges_from(edges)
 
         # Define positions based on latitude and longitude
-    pos = {i: (position[i][4], position[i][3]) for i in range(len(position))}
+    pos = {i: (LOCATIONS[i][4], LOCATIONS[i][3]) for i in range(len(LOCATIONS))}
 
         # Define the color mapping for transport modes
     transport_color_map = {
@@ -39,7 +39,7 @@ def main(path=[], transport=[]):
 
         # Draw the graph with locations and edges at geographic positions
     nx.draw_networkx_nodes(G, pos, nodelist=[0], node_size=300, node_color='green', node_shape='s', label="Tarjan's Home")
-    nx.draw_networkx_nodes(G, pos, nodelist=list(range(1, len(position))), node_size=300, node_color='lightblue', node_shape='s', label="Residental Streets")
+    nx.draw_networkx_nodes(G, pos, nodelist=list(range(1, len(LOCATIONS))), node_size=300, node_color='lightblue', node_shape='s', label="Residental Streets")
     nx.draw_networkx_edges(G, pos, edgelist=edges, edge_color=edge_colors, width=2)  # No generic label here, we'll use legends
 
         # Draw edge labels
@@ -74,7 +74,7 @@ def main(path=[], transport=[]):
                 labels.append(f"Walking")
                 
         # Draw the edge labels on the graph
-    nx.draw_networkx_labels(G, pos, labels={i: position[i][0] for i in range(len(position))}, font_size=10)
+    nx.draw_networkx_labels(G, pos, labels={i: LOCATIONS[i][0] for i in range(len(LOCATIONS))}, font_size=10)
 
      # Add custom legend with both location labels and transport modes
     plt.legend(handles=handles, labels=labels, loc="upper right", fontsize=9, markerscale=0.6, handleheight=2, handletextpad=1, borderpad=1.5, title="Transportation Modes and Locations")
