@@ -224,18 +224,18 @@ def calculate_dist():
         temp_distance += distance_between_locations(BEST_PATH[i], BEST_PATH[i+1])
     return temp_distance
 
-def main(current_pos, visited_nodes, total, optimazation, maximum_cost):
+def main(current_pos, visited_nodes, total, optimization, maximum_cost):
     global SHORTEST_PATH_LENGTH, SHORTEST_PATH_TIME, BEST_PATH, BEST_PATH_TRANSPORT, BEST_COST
         
-    if(optimazation == "distance"): # Find shortest distance
+    if(optimization == "distance"): # Find shortest distance
         find_shortest_path(current_pos, visited_nodes, total)
         BEST_PATH_TRANSPORT=["X","X","X","X","X","X","X","X","X","X","X"] # Transport vehicle doesn't matter, so default values are stored
-    elif(optimazation == "time"):   # Find least time
+    elif(optimization == "time"):   # Find least time
         transport = []
         find_least_time(current_pos, visited_nodes, total, transport)
         SHORTEST_PATH_LENGTH=calculate_dist()
         BEST_COST=calculate_cost()
-    elif(optimazation == "cost"):   # Find least time within a budget
+    elif(optimization == "cost"):   # Find least time within a budget
         transport = []
         find_least_cost(current_pos, visited_nodes, total, 0, transport, maximum_cost)
         SHORTEST_PATH_LENGTH=calculate_dist()
