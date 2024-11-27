@@ -41,7 +41,7 @@ def main():
 
        # Find the optimal path based on the user's choice     
     if (optimazation == "data"):
-        file_management.changeData()
+        file_management.change_data()
     elif (optimazation in ["distance", "time", "cost"]):
             # Wrap the calulation in logger to time the calulation process
         timed_calculate_distance = logger.timethis(calculate_distance.main)
