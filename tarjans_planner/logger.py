@@ -4,8 +4,7 @@ import datetime
 from functools import wraps
 
     # Finds the absolute path to the current file's directory
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def timethis(func):
     
@@ -13,7 +12,7 @@ def timethis(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
 
-        file_path = os.path.join(BASE_DIR, "time_log.txt") # Path to the log file
+        file_path = os.path.join(CURRENT_DIR, "time_log.txt") # Path to the log file
         start_time = time.time()  # Save the start time
         
         result = func(*args, **kwargs)  # Call the original function
