@@ -1,4 +1,4 @@
-Tarjan's Home,Home,Yeouido,37.5222,126.9344
+Tarjan's Home,Gukjegeumyung-ro,Yeongdeungpo-gu,37.5222,126.9344
 Relative_1,Gangnam-daero,Gangnam-gu,37.4979,127.0276
 Relative_2,Yangjae-daero,Seocho-gu,37.4833,127.0322
 Relative_3,Sinsa-daero,Gangnam-gu,37.5172,127.0286
