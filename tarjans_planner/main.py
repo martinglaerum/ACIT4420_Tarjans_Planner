@@ -23,16 +23,16 @@ def main():
         print('To find the most cost-efficient path, enter "cost"')
         print('To input or remove data, enter "data"')
         print('To exit, enter "exit"')
-        optimazation = input("Enter the option representing your choice: ").strip().lower()
+        optimization = input("Enter the option representing your choice: ").strip().lower()
         print('\n\n')
 
-        if optimazation in ["distance", "time", "cost", "data", "exit"]:
+        if optimization in ["distance", "time", "cost", "data", "exit"]:
             break  # Exit the loop if a valid choice is made
         else:
             print("Invalid choice. Please try again.\n")
 
         # Find the budget for the user
-    while (optimazation == "cost"):
+    while (optimization == "cost"):
         maximum_cost = int(input("What is your budget? "))
         if (maximum_cost > 0 and maximum_cost < 100000):
             break  # Exit the loop if a valid choice is made
@@ -40,12 +40,12 @@ def main():
             print("Invalid choice. Please try again.\n")
 
        # Find the optimal path based on the user's choice     
-    if (optimazation == "data"):
+    if (optimization == "data"):
         file_management.change_data()
-    elif (optimazation in ["distance", "time", "cost"]):
+    elif (optimization in ["distance", "time", "cost"]):
             # Wrap the calulation in logger to time the calulation process
         timed_calculate_distance = logger.timethis(calculate_distance.main)
-        result = timed_calculate_distance(initial_position, visited_nodes, 0, optimazation, maximum_cost)
+        result = timed_calculate_distance(initial_position, visited_nodes, 0, optimization, maximum_cost)
 
             # Change the distance to kilometers and meters
         kilometers = int(result["total_distance"]  // 1000)
@@ -56,7 +56,7 @@ def main():
         print("Total distance:", f"{kilometers} km and {meters} meters")
 
             # Change the time to hours, minutes and seconds
-        if(optimazation == "time" or optimazation == "cost"):
+        if(optimization == "time" or optimization == "cost"):
             hours = int(result["total_time"] // 3600)
             remaining_seconds = result["total_time"] % 3600
             minutes = int(remaining_seconds // 60)
