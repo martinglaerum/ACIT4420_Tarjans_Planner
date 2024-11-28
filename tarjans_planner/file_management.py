@@ -20,8 +20,7 @@ def change_data():
         district = input("Enter district name: ")
         latitude = float(input("Enter latitude (e.g., 37.1234): "))
         longitude = float(input("Enter longitude (e.g., 127.5678): "))
-        print("Invalid latitude or longitude. Please enter valid numbers.")
-
+        
             # Append new data to the locations file
         position.append([name, street, district, latitude, longitude])
         print("\nNew data added successfully!")
@@ -55,7 +54,6 @@ def save_data(position):
             file.write(",".join(map(str, row)) + "\n")
 
 def load_data():
-        # Finds the absolute path to the current file's directory
     position = []
         # Open the locations file and read it's content
     with open(FILE_PATH, "r") as file:
