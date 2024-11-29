@@ -10,7 +10,7 @@ setup(
     author_email="magla7524@oslomet.no",
     entry_points={
         'console_scripts': [
-            'tarjans_planner=tarjans_planner.main:main',  # Points directly to the main function in main.py
+            'tarjanplanner=tarjanplanner.main:main',  # Points directly to the main function in main.py
         ],
     },
     install_requires=[
