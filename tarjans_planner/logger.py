@@ -17,7 +17,7 @@ def timethis(func):
         
         result = func(*args, **kwargs)  # Call the original function
         
-        end_time = time.time()  # Save the start time
+        end_time = time.time()  # Save the end time
         execution_time = end_time - start_time
         
             # Print execution time
