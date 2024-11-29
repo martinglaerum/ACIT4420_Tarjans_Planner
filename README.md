@@ -33,7 +33,7 @@ To get started, follow these steps:
 ## Usage
 Once installed, you can use the tool by running the following command in your terminal:
 ```bash
-tarjans_planner
+tarjanplanner
 ```
 This will launch a menu where you can choose one of the following
 1. **Find shortest path**
@@ -54,7 +54,7 @@ Here is a brief overview of the project's structure:
 ```
 ACIT4420_Message_Sender/
 │
-├── tarjans_planner/
+├── tarjanplanner/
 │   ├── __init__.py
 │   ├── main.py                # Entry point for the program
 │   ├── calculate_distance.py
