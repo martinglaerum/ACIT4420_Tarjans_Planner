@@ -1,0 +1,11 @@
+Tarjan's Home,Gukjegeumyung-ro,Yeongdeungpo-gu,37.5222,126.9344
+Relative_1,Gangnam-daero,Gangnam-gu,37.4979,127.0276
+Relative_2,Yangjae-daero,Seocho-gu,37.4833,127.0322
+Relative_3,Sinsa-daero,Gangnam-gu,37.5172,127.0286
+Relative_4,Apgujeong-ro,Gangnam-gu,37.5219,127.0411
+Relative_5,Hannam-daero,Yongsan-gu,37.5340,127.0026
+Relative_6,Seongsu-daero,Seongdong-gu,37.5443,127.0557
+Relative_7,Cheongdam-ro,Gangnam-gu,37.5172,127.0391
+Relative_8,Bukhan-ro,Jongno-gu,37.5800,126.9844
+Relative_9,Samseong-ro,Gangnam-gu,37.5110,127.0590
+Relative_10,Jamsil-ro,Songpa-gu,37.5133,127.1028
